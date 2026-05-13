@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Untuk Ka Ega</title>
+
+    <style>
+
+        body {
+
+            font-family: Arial;
+
+        }
+
+        .box {
+
+            background-color: rgb(231, 189, 116);
+
+            border-radius: 30px;
+
+            padding: 20px;
+
+            width: 100%;
+
+            box-sizing: border-box;
+
+            text-align: center;
+
+        }
+
+        #screen {
+
+            background-color: white;
+
+            padding: 15px;
+
+            border-radius: 15px;
+
+            margin-bottom: 20px;
+
+            font-size: 30px;
+
+            letter-spacing: 10px;
+
+            min-height: 40px;
+
+        }
+
+        button {
+
+            width: 70px;
+
+            height: 70px;
+
+            font-size: 25px;
+
+            margin: 5px;
+
+            border: none;
+
+            border-radius: 15px;
+
+            cursor: pointer;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="box">
+
+        <h1>Enter PIN</h1>
+
+        <div id="screen"></div>
+
+        <button onclick="addNumber('1')">1</button>
+        <button onclick="addNumber('2')">2</button>
+        <button onclick="addNumber('3')">3</button>
+
+        <br>
+
+        <button onclick="addNumber('4')">4</button>
+        <button onclick="addNumber('5')">5</button>
+        <button onclick="addNumber('6')">6</button>
+
+        <br>
+
+        <button onclick="addNumber('7')">7</button>
+        <button onclick="addNumber('8')">8</button>
+        <button onclick="addNumber('9')">9</button>
+
+        <br>
+
+        <button onclick="clearPin()">C</button>
+        <button onclick="addNumber('0')">0</button>
+        <button onclick="checkPin()">✓</button>
+
+        <p id="result"></p>
+
+    </div>
+
+    <script>
+
+        let pin = "";
+
+        function addNumber(number) {
+
+            pin = pin + number;
+
+            document.getElementById("screen").innerHTML = "•".repeat(pin.length);
+
+        }
+
+        function clearPin() {
+
+            pin = "";
+
+            document.getElementById("screen").innerHTML = "";
+
+            document.getElementById("result").innerHTML = "";
+
+        }
+
+        function checkPin() {
+
+            if (pin == "170434") {
+
+                document.getElementById("result").innerHTML = "Correct PIN";
+                window.location.href = "https://app.milanote.com/1Wn7Rw14ebxKdb?p=m9Q31tkOe0G";
+
+            }
+
+            else {
+
+                document.getElementById("result").innerHTML = "Wrong PIN";
+
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>
